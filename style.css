@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&amp;display=swap');
+        
+        :root {
+            --tw-color-primary: #0ea5e9;
+        }
+        
+        * {
+            font-family: 'Cairo', system-ui, sans-serif;
+        }
+        
+        .page {
+            animation: fadeInPage 0.6s ease forwards;
+        }
+        
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .prayer-text {
+            animation: prayerReveal 1.8s ease forwards;
+        }
+        
+        @keyframes prayerReveal {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .stagger-1 { animation-delay: 300ms; }
+        .stagger-2 { animation-delay: 600ms; }
+        .stagger-3 { animation-delay: 900ms; }
+        
+        .glass {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(16px);
+        }
+        
+        .logo-glow {
+            text-shadow: 0 0 25px rgb(14 165 233);
+        }
+        
+        .question-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .result-bar {
+            animation: growBar 1.5s ease forwards;
+        }
