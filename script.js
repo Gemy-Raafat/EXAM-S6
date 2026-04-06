@@ -4,6 +4,7 @@
                 theme: { extend: {} }
             }
         }
+// gamal raafat
         
         // ====================== PARTICLES FOR PRAYER PAGE ======================
         function createParticles() {
