@@ -1,4 +1,4 @@
-        function initTailwind() {
+function initTailwind() {
             tailwind.config = {
                 content: [],
                 theme: { extend: {} }
@@ -38,6 +38,101 @@
         
         // ====================== ALL QUESTIONS FROM THE PDFs ======================
         const coursesData = {
+            // ====================== SOFTWARE ENGINEERING (NEW) ======================
+            software: {
+                name: "Software Engineering",
+                icon: "💻",
+                color: "cyan",
+                questions: [
+                    // ========== MCQ from Tutorial 4 (Waterfall, Incremental, Reuse) ==========
+                    { type: "mcq", q: "What is the main characteristic of the waterfall model?", options: ["A. Iterative development with customer feedback", "B. Separate and distinct phases of specification and development", "C. Reuse of existing components", "D. Continuous integration and deployment"], correct: "B", explanation: "The waterfall model is a plan-driven model with separate and distinct phases of specification and development." },
+                    { type: "mcq", q: "In incremental development, specification, development, and validation are:", options: ["A. Performed in sequence", "B. Completely separated", "C. Interleaved", "D. Not performed at all"], correct: "C", explanation: "In incremental development, specification, development, and validation are interleaved (overlapped in time)." },
+                    { type: "mcq", q: "Which of the following is a benefit of incremental development?", options: ["A. The process is highly visible to managers", "B. Cost of accommodating changing requirements is reduced", "C. System structure never degrades", "D. No documentation is needed"], correct: "B", explanation: "One benefit of incremental development is that the cost of accommodating changing customer requirements is reduced." },
+                    { type: "mcq", q: "Reuse-oriented software engineering is based on:", options: ["A. Building systems from scratch", "B. Integrating systems from existing components", "C. Using only waterfall model", "D. Avoiding any existing software"], correct: "B", explanation: "Reuse-oriented software engineering is based on integrating systems from existing components or COTS systems." },
+                    { type: "mcq", q: "What does COTS stand for?", options: ["A. Common Off-The-Shelf", "B. Commercial-Off-The-Shelf", "C. Computer Off-The-System", "D. Component Off-The-Shelf"], correct: "B", explanation: "COTS stands for Commercial-Off-The-Shelf systems." },
+                    { type: "mcq", q: "Which problem is associated with incremental development?", options: ["A. High cost of documentation", "B. System structure tends to degrade as new increments are added", "C. No customer feedback during development", "D. Cannot deliver software early"], correct: "B", explanation: "In incremental development, system structure tends to degrade as new increments are added unless refactoring is done." },
+                    { type: "mcq", q: "In practice, most large systems are developed using:", options: ["A. Only waterfall model", "B. Only incremental model", "C. A process that incorporates elements from all models", "D. Only reuse-oriented model"], correct: "C", explanation: "Most large systems are developed using a process that incorporates elements from all models (waterfall, incremental, and reuse-oriented)." },
+                    { type: "mcq", q: "What is refactoring in software development?", options: ["A. Adding new features quickly", "B. Improving software structure without changing functionality", "C. Removing all documentation", "D. Testing the system"], correct: "B", explanation: "Refactoring is the process of improving software structure without changing its functionality." },
+                    { type: "mcq", q: "What is the key advantage of incremental delivery?", options: ["A. Customers see the software only at the end", "B. Customers can use and gain value from the software earlier", "C. No customer feedback is needed", "D. Documentation is never updated"], correct: "B", explanation: "Customers are able to use and gain value from the software earlier in incremental development." },
+                    { type: "mcq", q: "Which statement about incremental development is TRUE?", options: ["A. It requires complete requirements before starting", "B. It reduces the cost of accommodating changes", "C. It always produces better documentation", "D. It cannot be used for large systems"], correct: "B", explanation: "Incremental development reduces the cost of accommodating changing customer requirements." },
+                    { type: "mcq", q: "What is the disadvantage of reuse-oriented engineering?", options: ["A. Slower delivery", "B. Loss of control over evolution of reused system elements", "C. Higher development costs", "D. No component testing"], correct: "B", explanation: "A disadvantage of reuse-oriented engineering is loss of control over evolution of reused system elements." },
+                    { type: "mcq", q: "In incremental development, managers need regular deliverables to:", options: ["A. Increase development cost", "B. Measure progress", "C. Reduce customer feedback", "D. Avoid testing"], correct: "B", explanation: "Managers need regular deliverables to measure progress because the process is not highly visible." },
+                    { type: "mcq", q: "The waterfall model is most appropriate when:", options: ["A. Requirements are changing rapidly", "B. Requirements are well-understood and changes are limited", "C. Customer wants early delivery", "D. System complexity is low"], correct: "B", explanation: "The waterfall model is appropriate when requirements are well-understood and changes will be fairly limited during the design process." },
+
+                    // ========== MCQ from Tutorial 3 (Process Activities, Requirements, Testing) ==========
+                    { type: "mcq", q: "In which software process model are the activities organized in sequence?", options: ["A. Incremental development", "B. Waterfall model", "C. Reuse-oriented development", "D. Agile development"], correct: "B", explanation: "In the waterfall model, activities are organized in sequence." },
+                    { type: "mcq", q: "What is the first step in the requirements engineering process?", options: ["A. Requirements validation", "B. Requirements specification", "C. Feasibility study", "D. Requirements elicitation"], correct: "D", explanation: "Requirements elicitation is the first step." },
+                    { type: "mcq", q: "Which design activity involves identifying the overall structure of the system?", options: ["A. Interface design", "B. Component design", "C. Database design", "D. Architectural design"], correct: "D", explanation: "Architectural design identifies the overall structure of the system." },
+                    { type: "mcq", q: "What is the main purpose of software validation?", options: ["A. To design the software", "B. To convert specification into executable system", "C. To check that the system meets its specification", "D. To define system interfaces"], correct: "C", explanation: "Software validation checks that the system meets its specification." },
+                    { type: "mcq", q: "Which testing stage tests individual components independently?", options: ["A. System testing", "B. Acceptance testing", "C. Development testing", "D. Integration testing"], correct: "C", explanation: "Development testing (component testing) tests individual components independently." },
+                    { type: "mcq", q: "What is the focus of acceptance testing?", options: ["A. Testing system performance", "B. Testing customer data to meet needs", "C. Testing individual modules", "D. Testing system architecture"], correct: "B", explanation: "Acceptance testing uses customer data to check that the system meets customer needs." },
+                    { type: "mcq", q: "Which of the following is NOT a design activity mentioned?", options: ["A. Architectural design", "B. Interface design", "C. Coding design", "D. Database design"], correct: "C", explanation: "Coding design is not mentioned as a design activity." },
+                    { type: "mcq", q: "What does V & V stand for?", options: ["A. Validation and Verification", "B. Verification and Validation", "C. Version and Variant", "D. Visual and Virtual"], correct: "B", explanation: "V&V stands for Verification and Validation." },
+                    { type: "mcq", q: "Why is software evolution important?", options: ["A. To keep the software unused", "B. To meet new requirements", "C. To delete old features", "D. To reduce system size"], correct: "B", explanation: "Software evolution is important to meet new requirements." },
+                    { type: "mcq", q: "Which process is concerned with translating a design into an executable program?", options: ["A. Specification", "B. Validation", "C. Implementation", "D. Evolution"], correct: "C", explanation: "Implementation translates design into an executable program." },
+
+                    // ========== MCQ from Tutorial 5 (Process Activities) ==========
+                    { type: "mcq", q: "What are the four basic process activities in software engineering?", options: ["A. Planning, coding, testing, deployment", "B. Specification, development, validation, evolution", "C. Analysis, design, implementation, maintenance", "D. Requirements, design, coding, testing"], correct: "B", explanation: "The four basic process activities are specification, development, validation, and evolution." },
+                    { type: "mcq", q: "In the waterfall model, process activities are organized:", options: ["A. Interleaved", "B. In sequence", "C. Concurrently", "D. Randomly"], correct: "B", explanation: "In the waterfall model, activities are organized in sequence." },
+                    { type: "mcq", q: "What is the process of establishing what services are required from a system?", options: ["A. Software validation", "B. Software evolution", "C. Software specification", "D. Software implementation"], correct: "C", explanation: "Software specification establishes what services are required." },
+                    { type: "mcq", q: "Requirements engineering includes which of the following activities?", options: ["A. Feasibility study only", "B. Requirements elicitation, analysis, specification, and validation", "C. System design only", "D. Implementation only"], correct: "B", explanation: "Requirements engineering includes elicitation, analysis, specification, and validation." },
+                    { type: "mcq", q: "What is the purpose of a feasibility study?", options: ["A. To write code", "B. To assess whether there is a market need and if it is realistic technically and financially", "C. To test the system", "D. To deploy the system"], correct: "B", explanation: "Feasibility study assesses market need and technical/financial realism." },
+                    { type: "mcq", q: "What is software design?", options: ["A. Writing code", "B. Testing the system", "C. Designing a software structure that realizes the specification", "D. Deploying the system"], correct: "C", explanation: "Software design is designing a structure that realizes the specification." },
+                    { type: "mcq", q: "Which of the following is a design activity?", options: ["A. Requirements elicitation", "B. Architectural design", "C. User training", "D. System deployment"], correct: "B", explanation: "Architectural design is a design activity." },
+                    { type: "mcq", q: "What is the purpose of software validation?", options: ["A. To write code", "B. To show that a system conforms to its specification and meets customer requirements", "C. To plan the project", "D. To manage changes"], correct: "B", explanation: "Validation shows that the system conforms to specification and meets customer needs." },
+                    { type: "mcq", q: "What is system testing?", options: ["A. Testing individual components", "B. Executing the system with test cases derived from the specification", "C. Testing with real users", "D. Testing documentation"], correct: "B", explanation: "System testing executes the system with test cases derived from the specification." },
+                    { type: "mcq", q: "What is acceptance testing?", options: ["A. Testing individual components", "B. Testing the system as a whole", "C. Testing with customer data to check that the system meets customer needs", "D. Testing documentation"], correct: "C", explanation: "Acceptance testing uses customer data to check that the system meets customer needs." },
+                    { type: "mcq", q: "Why must software evolve?", options: ["A. Because hardware becomes obsolete", "B. Because requirements change through changing business circumstances", "C. Because developers want to add new features", "D. Because users request it"], correct: "B", explanation: "Software must evolve because requirements change through changing business circumstances." },
+                    { type: "mcq", q: "What is the difference between verification and validation?", options: ["A. Verification checks conformance to specification; validation checks customer needs", "B. Verification is testing; validation is planning", "C. Verification is design; validation is implementation", "D. They are the same"], correct: "A", explanation: "Verification checks conformance to specification; validation checks customer needs." },
+                    { type: "mcq", q: "Which testing stage tests interactions between components?", options: ["A. Component testing", "B. Unit testing", "C. System testing", "D. Acceptance testing"], correct: "C", explanation: "System testing tests interactions between components." },
+                    { type: "mcq", q: "In requirements engineering, what are the two levels of detail for requirements?", options: ["A. High-level and low-level", "B. User requirements and system requirements", "C. Functional and non-functional", "D. Simple and complex"], correct: "B", explanation: "The two levels are user requirements and system requirements." },
+
+                    // ========== TRUE/FALSE from Tutorial 4 ==========
+                    { type: "tf", q: "The waterfall model is an agile development approach.", correct: false, explanation: "False. The waterfall model is a plan-driven model, not agile." },
+                    { type: "tf", q: "In incremental development, specification, development, and validation are interleaved.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Reuse-oriented software engineering always uses the waterfall model.", correct: false, explanation: "False. Reuse-oriented software engineering may be plan-driven or agile." },
+                    { type: "tf", q: "COTS stands for Commercial-Off-The-Shelf systems.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Incremental development makes it harder to get customer feedback.", correct: false, explanation: "False. Incremental development makes it easier to get customer feedback." },
+                    { type: "tf", q: "System structure tends to degrade as new increments are added without refactoring.", correct: true, explanation: "True" },
+                    { type: "tf", q: "The waterfall model has separate and distinct phases of specification and development.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Refactoring is the process of adding new features without changing structure.", correct: false, explanation: "False. Refactoring improves software structure without changing functionality." },
+                    { type: "tf", q: "Incremental development allows more rapid delivery of useful software to customers.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Web services cannot be used for remote invocation.", correct: false, explanation: "False. Web services can be used for remote invocation." },
+                    { type: "tf", q: "The cost of accommodating changing requirements is increased in incremental development.", correct: false, explanation: "False. The cost is reduced, not increased." },
+                    { type: "tf", q: "Reuse-oriented engineering reduces costs and risks as less software is developed from scratch.", correct: true, explanation: "True" },
+                    { type: "tf", q: "In incremental development, it is cost-effective to produce documents for every version.", correct: false, explanation: "False. It is not cost-effective to produce documents for every version." },
+                    { type: "tf", q: "Most large systems are developed using a single process model.", correct: false, explanation: "False. Most large systems use a process that incorporates elements from all models." },
+
+                    // ========== TRUE/FALSE from Tutorial 3 ==========
+                    { type: "tf", q: "In the waterfall model, activities are interleaved rather than sequential.", correct: false, explanation: "False. In waterfall model, activities are sequential." },
+                    { type: "tf", q: "Requirements validation checks the technical and financial feasibility of the system.", correct: false, explanation: "False. Feasibility study checks this, not validation." },
+                    { type: "tf", q: "Software design and implementation are closely related and may be interleaved.", correct: true, explanation: "True" },
+                    { type: "tf", q: "System testing involves testing with customer data.", correct: false, explanation: "False. Acceptance testing uses customer data." },
+                    { type: "tf", q: "Software evolution is no longer needed once a system is delivered.", correct: false, explanation: "False. Software evolution is essential after delivery." },
+                    { type: "tf", q: "Component design defines how each system component will operate.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Testing is the least commonly used V & V activity.", correct: false, explanation: "False. Testing is the most commonly used V&V activity." },
+                    { type: "tf", q: "Interface design defines the interfaces between system components.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Software processes are abstract representations of process models.", correct: false, explanation: "False. Process models are abstract representations of processes." },
+                    { type: "tf", q: "Reuse-oriented development is one of the general process models.", correct: true, explanation: "True" },
+
+                    // ========== TRUE/FALSE from Tutorial 5 ==========
+                    { type: "tf", q: "Real software processes are interleaved sequences of technical, collaborative, and managerial activities.", correct: true, explanation: "True" },
+                    { type: "tf", q: "In the waterfall model, process activities are interleaved.", correct: false, explanation: "False. In waterfall model, activities are organized in sequence." },
+                    { type: "tf", q: "Software specification is the process of establishing what services are required from a system.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Requirements validation checks the validity of requirements for realism, consistency, and completeness.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Software design and implementation are completely separate activities with no overlap.", correct: false, explanation: "False. They are closely related and may be interleaved." },
+                    { type: "tf", q: "Architectural design identifies the overall structure of the system and principal components.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Interface design defines interfaces between system components.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Software validation only involves system testing.", correct: false, explanation: "False. Validation involves review processes and system testing." },
+                    { type: "tf", q: "Component testing is performed on individual components independently.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Acceptance testing is done by developers without customer involvement.", correct: false, explanation: "False. Acceptance testing is done with/by customers." },
+                    { type: "tf", q: "Software evolution is only relevant for legacy systems.", correct: false, explanation: "False. Software evolution is relevant for all systems." },
+                    { type: "tf", q: "User requirements are more detailed than system requirements.", correct: false, explanation: "False. System requirements are more detailed." },
+                    { type: "tf", q: "Testing is the most commonly used validation technique.", correct: true, explanation: "True" },
+                    { type: "tf", q: "Software development and evolution are now seen as a continuum rather than separate processes.", correct: true, explanation: "True" }
+                ]
+            },
+
             distributed: {
                 name: "Distributed Systems",
                 icon: "🌐",
@@ -1001,6 +1096,6 @@ explanation: "True" }
         window.onload = function() {
             initTailwind()
             createParticles()
-            console.log('%c✅ - بنك أسئلة جمال رأفت', 'background:#0ea5e9;color:white;padding:4px 8px;border-radius:4px')
+            console.log('%c✅ - بنك أسئلة جمال رأفت (تمت إضافة Software Engineering)', 'background:#0ea5e9;color:white;padding:4px 8px;border-radius:4px')
             console.log('جميع الأسئلة مستخرجة من الـ PDFs المرفقة (MCQ + True/False فقط)')
         }
