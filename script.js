@@ -600,7 +600,7 @@ correct: "B", explanation: "interrupt()" },
 embedded: {
     name: "Embedded Systems",
     icon: "⚙️",
-    color: "emerald",
+    color: "emerald"
     questions: [
 
 { type: "mcq",
