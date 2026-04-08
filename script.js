@@ -600,7 +600,7 @@ correct: "B", explanation: "interrupt()" },
 embedded: {
     name: "Embedded Systems",
     icon: "⚙️",
-    color: "emerald"
+    color: "emerald",
     questions: [
 
 { type: "mcq",
@@ -948,7 +948,7 @@ q: "To change duty cycle in real time, you should update:",
 options: ["A) TCCRnB only", "B) OCRnx", "C) DDRx", "D) ICRn only"],
 correct: "B",
 explanation: "OCRnx"
-},
+}
                 ]
 };
         
