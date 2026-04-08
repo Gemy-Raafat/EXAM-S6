@@ -602,7 +602,7 @@ correct: "B", explanation: "interrupt()" },
                        icon: "⚙️",
                        color: "emerald", 
                        questions: [
-                                   { type: "mcq",
+{ type: "mcq",
 q: "Which is an example of an 8-bit microcontroller family mentioned in the slides?",
 options: ["A) ARM Cortex-M", "B) 8051", "C) Intel Core i7", "D) NVIDIA GPU"],
 correct: "B",
@@ -949,7 +949,7 @@ options: ["A) TCCRnB only", "B) OCRnx", "C) DDRx", "D) ICRn only"],
 correct: "B",
 explanation: "OCRnx"
 }
-]
+  ]
            };
         
         // ====================== PRAYER PAGE ======================
