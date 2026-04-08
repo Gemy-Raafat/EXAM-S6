@@ -4,6 +4,9 @@ function initTailwind() {
                 theme: { extend: {} }
             }
         }
+function prayAndProceed() {
+    alert("Proceeding...");
+}
 // gamal raafat
         
         // ====================== PARTICLES FOR PRAYER PAGE ======================
