@@ -1,11 +1,9 @@
-function initTailwind() {
+        function initTailwind() {
             tailwind.config = {
                 content: [],
                 theme: { extend: {} }
             }
         }
-
-// gamal raafat
         
         // ====================== PARTICLES FOR PRAYER PAGE ======================
         function createParticles() {
@@ -39,101 +37,6 @@ function initTailwind() {
         
         // ====================== ALL QUESTIONS FROM THE PDFs ======================
         const coursesData = {
-            // ====================== SOFTWARE ENGINEERING (NEW) ======================
-            software: {
-                name: "Software Engineering",
-                icon: "💻",
-                color: "cyan",
-                questions: [
-                    // ========== MCQ from Tutorial 4 (Waterfall, Incremental, Reuse) ==========
-                    { type: "mcq", q: "What is the main characteristic of the waterfall model?", options: ["A. Iterative development with customer feedback", "B. Separate and distinct phases of specification and development", "C. Reuse of existing components", "D. Continuous integration and deployment"], correct: "B", explanation: "The waterfall model is a plan-driven model with separate and distinct phases of specification and development." },
-                    { type: "mcq", q: "In incremental development, specification, development, and validation are:", options: ["A. Performed in sequence", "B. Completely separated", "C. Interleaved", "D. Not performed at all"], correct: "C", explanation: "In incremental development, specification, development, and validation are interleaved (overlapped in time)." },
-                    { type: "mcq", q: "Which of the following is a benefit of incremental development?", options: ["A. The process is highly visible to managers", "B. Cost of accommodating changing requirements is reduced", "C. System structure never degrades", "D. No documentation is needed"], correct: "B", explanation: "One benefit of incremental development is that the cost of accommodating changing customer requirements is reduced." },
-                    { type: "mcq", q: "Reuse-oriented software engineering is based on:", options: ["A. Building systems from scratch", "B. Integrating systems from existing components", "C. Using only waterfall model", "D. Avoiding any existing software"], correct: "B", explanation: "Reuse-oriented software engineering is based on integrating systems from existing components or COTS systems." },
-                    { type: "mcq", q: "What does COTS stand for?", options: ["A. Common Off-The-Shelf", "B. Commercial-Off-The-Shelf", "C. Computer Off-The-System", "D. Component Off-The-Shelf"], correct: "B", explanation: "COTS stands for Commercial-Off-The-Shelf systems." },
-                    { type: "mcq", q: "Which problem is associated with incremental development?", options: ["A. High cost of documentation", "B. System structure tends to degrade as new increments are added", "C. No customer feedback during development", "D. Cannot deliver software early"], correct: "B", explanation: "In incremental development, system structure tends to degrade as new increments are added unless refactoring is done." },
-                    { type: "mcq", q: "In practice, most large systems are developed using:", options: ["A. Only waterfall model", "B. Only incremental model", "C. A process that incorporates elements from all models", "D. Only reuse-oriented model"], correct: "C", explanation: "Most large systems are developed using a process that incorporates elements from all models (waterfall, incremental, and reuse-oriented)." },
-                    { type: "mcq", q: "What is refactoring in software development?", options: ["A. Adding new features quickly", "B. Improving software structure without changing functionality", "C. Removing all documentation", "D. Testing the system"], correct: "B", explanation: "Refactoring is the process of improving software structure without changing its functionality." },
-                    { type: "mcq", q: "What is the key advantage of incremental delivery?", options: ["A. Customers see the software only at the end", "B. Customers can use and gain value from the software earlier", "C. No customer feedback is needed", "D. Documentation is never updated"], correct: "B", explanation: "Customers are able to use and gain value from the software earlier in incremental development." },
-                    { type: "mcq", q: "Which statement about incremental development is TRUE?", options: ["A. It requires complete requirements before starting", "B. It reduces the cost of accommodating changes", "C. It always produces better documentation", "D. It cannot be used for large systems"], correct: "B", explanation: "Incremental development reduces the cost of accommodating changing customer requirements." },
-                    { type: "mcq", q: "What is the disadvantage of reuse-oriented engineering?", options: ["A. Slower delivery", "B. Loss of control over evolution of reused system elements", "C. Higher development costs", "D. No component testing"], correct: "B", explanation: "A disadvantage of reuse-oriented engineering is loss of control over evolution of reused system elements." },
-                    { type: "mcq", q: "In incremental development, managers need regular deliverables to:", options: ["A. Increase development cost", "B. Measure progress", "C. Reduce customer feedback", "D. Avoid testing"], correct: "B", explanation: "Managers need regular deliverables to measure progress because the process is not highly visible." },
-                    { type: "mcq", q: "The waterfall model is most appropriate when:", options: ["A. Requirements are changing rapidly", "B. Requirements are well-understood and changes are limited", "C. Customer wants early delivery", "D. System complexity is low"], correct: "B", explanation: "The waterfall model is appropriate when requirements are well-understood and changes will be fairly limited during the design process." },
-
-                    // ========== MCQ from Tutorial 3 (Process Activities, Requirements, Testing) ==========
-                    { type: "mcq", q: "In which software process model are the activities organized in sequence?", options: ["A. Incremental development", "B. Waterfall model", "C. Reuse-oriented development", "D. Agile development"], correct: "B", explanation: "In the waterfall model, activities are organized in sequence." },
-                    { type: "mcq", q: "What is the first step in the requirements engineering process?", options: ["A. Requirements validation", "B. Requirements specification", "C. Feasibility study", "D. Requirements elicitation"], correct: "D", explanation: "Requirements elicitation is the first step." },
-                    { type: "mcq", q: "Which design activity involves identifying the overall structure of the system?", options: ["A. Interface design", "B. Component design", "C. Database design", "D. Architectural design"], correct: "D", explanation: "Architectural design identifies the overall structure of the system." },
-                    { type: "mcq", q: "What is the main purpose of software validation?", options: ["A. To design the software", "B. To convert specification into executable system", "C. To check that the system meets its specification", "D. To define system interfaces"], correct: "C", explanation: "Software validation checks that the system meets its specification." },
-                    { type: "mcq", q: "Which testing stage tests individual components independently?", options: ["A. System testing", "B. Acceptance testing", "C. Development testing", "D. Integration testing"], correct: "C", explanation: "Development testing (component testing) tests individual components independently." },
-                    { type: "mcq", q: "What is the focus of acceptance testing?", options: ["A. Testing system performance", "B. Testing customer data to meet needs", "C. Testing individual modules", "D. Testing system architecture"], correct: "B", explanation: "Acceptance testing uses customer data to check that the system meets customer needs." },
-                    { type: "mcq", q: "Which of the following is NOT a design activity mentioned?", options: ["A. Architectural design", "B. Interface design", "C. Coding design", "D. Database design"], correct: "C", explanation: "Coding design is not mentioned as a design activity." },
-                    { type: "mcq", q: "What does V & V stand for?", options: ["A. Validation and Verification", "B. Verification and Validation", "C. Version and Variant", "D. Visual and Virtual"], correct: "B", explanation: "V&V stands for Verification and Validation." },
-                    { type: "mcq", q: "Why is software evolution important?", options: ["A. To keep the software unused", "B. To meet new requirements", "C. To delete old features", "D. To reduce system size"], correct: "B", explanation: "Software evolution is important to meet new requirements." },
-                    { type: "mcq", q: "Which process is concerned with translating a design into an executable program?", options: ["A. Specification", "B. Validation", "C. Implementation", "D. Evolution"], correct: "C", explanation: "Implementation translates design into an executable program." },
-
-                    // ========== MCQ from Tutorial 5 (Process Activities) ==========
-                    { type: "mcq", q: "What are the four basic process activities in software engineering?", options: ["A. Planning, coding, testing, deployment", "B. Specification, development, validation, evolution", "C. Analysis, design, implementation, maintenance", "D. Requirements, design, coding, testing"], correct: "B", explanation: "The four basic process activities are specification, development, validation, and evolution." },
-                    { type: "mcq", q: "In the waterfall model, process activities are organized:", options: ["A. Interleaved", "B. In sequence", "C. Concurrently", "D. Randomly"], correct: "B", explanation: "In the waterfall model, activities are organized in sequence." },
-                    { type: "mcq", q: "What is the process of establishing what services are required from a system?", options: ["A. Software validation", "B. Software evolution", "C. Software specification", "D. Software implementation"], correct: "C", explanation: "Software specification establishes what services are required." },
-                    { type: "mcq", q: "Requirements engineering includes which of the following activities?", options: ["A. Feasibility study only", "B. Requirements elicitation, analysis, specification, and validation", "C. System design only", "D. Implementation only"], correct: "B", explanation: "Requirements engineering includes elicitation, analysis, specification, and validation." },
-                    { type: "mcq", q: "What is the purpose of a feasibility study?", options: ["A. To write code", "B. To assess whether there is a market need and if it is realistic technically and financially", "C. To test the system", "D. To deploy the system"], correct: "B", explanation: "Feasibility study assesses market need and technical/financial realism." },
-                    { type: "mcq", q: "What is software design?", options: ["A. Writing code", "B. Testing the system", "C. Designing a software structure that realizes the specification", "D. Deploying the system"], correct: "C", explanation: "Software design is designing a structure that realizes the specification." },
-                    { type: "mcq", q: "Which of the following is a design activity?", options: ["A. Requirements elicitation", "B. Architectural design", "C. User training", "D. System deployment"], correct: "B", explanation: "Architectural design is a design activity." },
-                    { type: "mcq", q: "What is the purpose of software validation?", options: ["A. To write code", "B. To show that a system conforms to its specification and meets customer requirements", "C. To plan the project", "D. To manage changes"], correct: "B", explanation: "Validation shows that the system conforms to specification and meets customer needs." },
-                    { type: "mcq", q: "What is system testing?", options: ["A. Testing individual components", "B. Executing the system with test cases derived from the specification", "C. Testing with real users", "D. Testing documentation"], correct: "B", explanation: "System testing executes the system with test cases derived from the specification." },
-                    { type: "mcq", q: "What is acceptance testing?", options: ["A. Testing individual components", "B. Testing the system as a whole", "C. Testing with customer data to check that the system meets customer needs", "D. Testing documentation"], correct: "C", explanation: "Acceptance testing uses customer data to check that the system meets customer needs." },
-                    { type: "mcq", q: "Why must software evolve?", options: ["A. Because hardware becomes obsolete", "B. Because requirements change through changing business circumstances", "C. Because developers want to add new features", "D. Because users request it"], correct: "B", explanation: "Software must evolve because requirements change through changing business circumstances." },
-                    { type: "mcq", q: "What is the difference between verification and validation?", options: ["A. Verification checks conformance to specification; validation checks customer needs", "B. Verification is testing; validation is planning", "C. Verification is design; validation is implementation", "D. They are the same"], correct: "A", explanation: "Verification checks conformance to specification; validation checks customer needs." },
-                    { type: "mcq", q: "Which testing stage tests interactions between components?", options: ["A. Component testing", "B. Unit testing", "C. System testing", "D. Acceptance testing"], correct: "C", explanation: "System testing tests interactions between components." },
-                    { type: "mcq", q: "In requirements engineering, what are the two levels of detail for requirements?", options: ["A. High-level and low-level", "B. User requirements and system requirements", "C. Functional and non-functional", "D. Simple and complex"], correct: "B", explanation: "The two levels are user requirements and system requirements." },
-
-                    // ========== TRUE/FALSE from Tutorial 4 ==========
-                    { type: "tf", q: "The waterfall model is an agile development approach.", correct: false, explanation: "False. The waterfall model is a plan-driven model, not agile." },
-                    { type: "tf", q: "In incremental development, specification, development, and validation are interleaved.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Reuse-oriented software engineering always uses the waterfall model.", correct: false, explanation: "False. Reuse-oriented software engineering may be plan-driven or agile." },
-                    { type: "tf", q: "COTS stands for Commercial-Off-The-Shelf systems.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Incremental development makes it harder to get customer feedback.", correct: false, explanation: "False. Incremental development makes it easier to get customer feedback." },
-                    { type: "tf", q: "System structure tends to degrade as new increments are added without refactoring.", correct: true, explanation: "True" },
-                    { type: "tf", q: "The waterfall model has separate and distinct phases of specification and development.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Refactoring is the process of adding new features without changing structure.", correct: false, explanation: "False. Refactoring improves software structure without changing functionality." },
-                    { type: "tf", q: "Incremental development allows more rapid delivery of useful software to customers.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Web services cannot be used for remote invocation.", correct: false, explanation: "False. Web services can be used for remote invocation." },
-                    { type: "tf", q: "The cost of accommodating changing requirements is increased in incremental development.", correct: false, explanation: "False. The cost is reduced, not increased." },
-                    { type: "tf", q: "Reuse-oriented engineering reduces costs and risks as less software is developed from scratch.", correct: true, explanation: "True" },
-                    { type: "tf", q: "In incremental development, it is cost-effective to produce documents for every version.", correct: false, explanation: "False. It is not cost-effective to produce documents for every version." },
-                    { type: "tf", q: "Most large systems are developed using a single process model.", correct: false, explanation: "False. Most large systems use a process that incorporates elements from all models." },
-
-                    // ========== TRUE/FALSE from Tutorial 3 ==========
-                    { type: "tf", q: "In the waterfall model, activities are interleaved rather than sequential.", correct: false, explanation: "False. In waterfall model, activities are sequential." },
-                    { type: "tf", q: "Requirements validation checks the technical and financial feasibility of the system.", correct: false, explanation: "False. Feasibility study checks this, not validation." },
-                    { type: "tf", q: "Software design and implementation are closely related and may be interleaved.", correct: true, explanation: "True" },
-                    { type: "tf", q: "System testing involves testing with customer data.", correct: false, explanation: "False. Acceptance testing uses customer data." },
-                    { type: "tf", q: "Software evolution is no longer needed once a system is delivered.", correct: false, explanation: "False. Software evolution is essential after delivery." },
-                    { type: "tf", q: "Component design defines how each system component will operate.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Testing is the least commonly used V & V activity.", correct: false, explanation: "False. Testing is the most commonly used V&V activity." },
-                    { type: "tf", q: "Interface design defines the interfaces between system components.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Software processes are abstract representations of process models.", correct: false, explanation: "False. Process models are abstract representations of processes." },
-                    { type: "tf", q: "Reuse-oriented development is one of the general process models.", correct: true, explanation: "True" },
-
-                    // ========== TRUE/FALSE from Tutorial 5 ==========
-                    { type: "tf", q: "Real software processes are interleaved sequences of technical, collaborative, and managerial activities.", correct: true, explanation: "True" },
-                    { type: "tf", q: "In the waterfall model, process activities are interleaved.", correct: false, explanation: "False. In waterfall model, activities are organized in sequence." },
-                    { type: "tf", q: "Software specification is the process of establishing what services are required from a system.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Requirements validation checks the validity of requirements for realism, consistency, and completeness.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Software design and implementation are completely separate activities with no overlap.", correct: false, explanation: "False. They are closely related and may be interleaved." },
-                    { type: "tf", q: "Architectural design identifies the overall structure of the system and principal components.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Interface design defines interfaces between system components.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Software validation only involves system testing.", correct: false, explanation: "False. Validation involves review processes and system testing." },
-                    { type: "tf", q: "Component testing is performed on individual components independently.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Acceptance testing is done by developers without customer involvement.", correct: false, explanation: "False. Acceptance testing is done with/by customers." },
-                    { type: "tf", q: "Software evolution is only relevant for legacy systems.", correct: false, explanation: "False. Software evolution is relevant for all systems." },
-                    { type: "tf", q: "User requirements are more detailed than system requirements.", correct: false, explanation: "False. System requirements are more detailed." },
-                    { type: "tf", q: "Testing is the most commonly used validation technique.", correct: true, explanation: "True" },
-                    { type: "tf", q: "Software development and evolution are now seen as a continuum rather than separate processes.", correct: true, explanation: "True" }
-                ]
-            },
-
             distributed: {
                 name: "Distributed Systems",
                 icon: "🌐",
@@ -598,360 +501,263 @@ correct: "B", explanation: "interrupt()" },
 { type: "tf", q: "The start() method creates a completely new thread and executes the run() method concurrently.", correct: true, explanation: "True" }
                 ]
             },
-embedded: {
-    name: "Embedded Systems",
-    icon: "⚙️",
-    color: "emerald",
-    questions: [
+            embedded: {
+                name: "Embedded Systems",
+                icon: "⚙️",
+                color: "emerald",
+                questions: [
+                   { type: "mcq", q: "Which is an example of an 8-bit microcontroller family mentioned in the slides?", 
+options: ["A) ARM Cortex-M", "B) 8051", "C) Intel Core i7", "D) NVIDIA GPU"], 
+correct: "B", explanation: "8051" },
 
-{ type: "mcq",
-q: "Which is an example of an 8-bit microcontroller family mentioned in the slides?",
-options: ["A) ARM Cortex-M", "B) 8051", "C) Intel Core i7", "D) NVIDIA GPU"],
-correct: "B",
-explanation: "8051"
-},
+{ type: "mcq", q: "Which factor is NOT listed as a criterion for choosing a microcontroller?", 
+options: ["A) Power consumption", "B) Cost per unit", "C) Packaging", "D) Screen resolution"], 
+correct: "D", explanation: "Screen resolution" },
 
-{ type: "mcq",
-q: "Which factor is NOT listed as a criterion for choosing a microcontroller?",
-options: ["A) Power consumption", "B) Cost per unit", "C) Packaging", "D) Screen resolution"],
-correct: "D",
-explanation: "Screen resolution"
-},
+{ type: "mcq", q: "The 8051 CPU can work on ____ bits of data at a time.", 
+options: ["A) 4", "B) 8", "C) 16", "D) 32"], 
+correct: "B", explanation: "8" },
 
-{ type: "mcq",
-q: "The 8051 CPU can work on ____ bits of data at a time.",
-options: ["A) 4", "B) 8", "C) 16", "D) 32"],
-correct: "B",
-explanation: "8"
-},
+{ type: "mcq", q: "Which memory type is non-volatile and commonly used to store firmware?", 
+options: ["A) SRAM", "B) Flash/ROM", "C) CPU registers only", "D) Cache only"], 
+correct: "B", explanation: "Flash/ROM" },
 
-{ type: "mcq",
-q: "Which memory type is non-volatile and commonly used to store firmware?",
-options: ["A) SRAM", "B) Flash/ROM", "C) CPU registers only", "D) Cache only"],
-correct: "B",
-explanation: "Flash/ROM"
-},
+{ type: "mcq", q: "Which tool mainly converts C/C++ into machine code?", 
+options: ["A) IDE", "B) Compiler", "C) Debugger", "D) Oscilloscope"], 
+correct: "B", explanation: "Compiler" },
 
-{ type: "mcq",
-q: "Which tool mainly converts C/C++ into machine code?",
-options: ["A) IDE", "B) Compiler", "C) Debugger", "D) Oscilloscope"],
-correct: "B",
-explanation: "Compiler"
-},
+{ type: "mcq", q: "In AVR GPIO, which register is read to get the actual logic level on a pin?", 
+options: ["A) DDRx", "B) PORTx", "C) PINx", "D) OCRx"], 
+correct: "C", explanation: "PINx" },
 
-{ type: "mcq",
-q: "In AVR GPIO, which register is read to get the actual logic level on a pin?",
-options: ["A) DDRx", "B) PORTx", "C) PINx", "D) OCRx"],
-correct: "C",
-explanation: "PINx"
-},
+{ type: "mcq", q: "If DDRB bit5 = 1, then PB5 is configured as:", 
+options: ["A) INPUT", "B) ANALOG", "C) OUTPUT", "D) PWM-only"], 
+correct: "C", explanation: "OUTPUT" },
 
-{ type: "mcq",
-q: "If DDRB bit5 = 1, then PB5 is configured as:",
-options: ["A) INPUT", "B) ANALOG", "C) OUTPUT", "D) PWM-only"],
-correct: "C",
-explanation: "OUTPUT"
-},
+{ type: "mcq", q: "When a pin is configured as INPUT (DDRx bit = 0), setting PORTx bit = 1 will:", 
+options: ["A) Force the pin LOW", "B) Enable internal pull-up resistor", "C) Disable reading from pin", "D) Turn pin into OUTPUT"], 
+correct: "B", explanation: "Enable internal pull-up resistor" },
 
-{ type: "mcq",
-q: "When a pin is configured as INPUT (DDRx bit = 0), setting PORTx bit = 1 will:",
-options: ["A) Force the pin LOW", "B) Enable internal pull-up resistor", "C) Disable reading from pin", "D) Turn pin into OUTPUT"],
-correct: "B",
-explanation: "Enable internal pull-up resistor"
-},
+{ type: "mcq", q: "PINx register is used to:", 
+options: ["A) Set pin direction", "B) Write output values", "C) Enable ADC", "D) Read the actual logic level on a pin"], 
+correct: "D", explanation: "Read the actual logic level on a pin" },
 
-{ type: "mcq",
-q: "PINx register is used to:",
-options: ["A) Set pin direction", "B) Write output values", "C) Enable ADC", "D) Read the actual logic level on a pin"],
-correct: "D",
-explanation: "Read the actual logic level on a pin"
-},
+{ type: "mcq", q: "When a pin is configured as OUTPUT (DDRx bit = 1), setting PORTx bit = 1 makes the pin:", 
+options: ["A) LOW", "B) FLOATING", "C) INPUT", "D) HIGH"], 
+correct: "D", explanation: "HIGH" },
 
-{ type: "mcq",
-q: "When a pin is configured as OUTPUT (DDRx bit = 1), setting PORTx bit = 1 makes the pin:",
-options: ["A) LOW", "B) FLOATING", "C) INPUT", "D) HIGH"],
-correct: "D",
-explanation: "HIGH"
-},
+{ type: "mcq", q: "Which operation sets a bit (makes it 1)?", 
+options: ["A) REG &= ~(1<<bit)", "B) REG ^= (1<<bit)", "C) REG |= (1<<bit)", "D) REG = ~(1<<bit)"], 
+correct: "C", explanation: "REG |= (1<<bit)" },
 
-{ type: "mcq",
-q: "Which operation sets a bit (makes it 1)?",
-options: ["A) REG &= ~(1<<bit)", "B) REG ^= (1<<bit)", "C) REG |= (1<<bit)", "D) REG = ~(1<<bit)"],
-correct: "C",
-explanation: "REG |= (1<<bit)"
-},
+{ type: "mcq", q: "The main disadvantage of using delay() is:", 
+options: ["A) It increases accuracy", "B) It blocks CPU execution", "C) It reduces memory usage", "D) It enables interrupts"], 
+correct: "B", explanation: "It blocks CPU execution" },
 
-{ type: "mcq",
-q: "The main disadvantage of using delay() is:",
-options: ["A) It increases accuracy", "B) It blocks CPU execution", "C) It reduces memory usage", "D) It enables interrupts"],
-correct: "B",
-explanation: "It blocks CPU execution"
-},
+{ type: "mcq", q: "A prescaler is used to:", 
+options: ["A) Increase CPU speed", "B) Divide the timer clock", "C) Reset the timer counter", "D) Enable ADC"], 
+correct: "B", explanation: "Divide the timer clock" },
 
-{ type: "mcq",
-q: "A prescaler is used to:",
-options: ["A) Increase CPU speed", "B) Divide the timer clock", "C) Reset the timer counter", "D) Enable ADC"],
-correct: "B",
-explanation: "Divide the timer clock"
-},
+{ type: "mcq", q: "In CTC mode, the timer resets when:", 
+options: ["A) It overflows", "B) It matches OCR1A", "C) It reaches 0", "D) It receives an external interrupt"], 
+correct: "B", explanation: "It matches OCR1A" },
 
-{ type: "mcq",
-q: "In CTC mode, the timer resets when:",
-options: ["A) It overflows", "B) It matches OCR1A", "C) It reaches 0", "D) It receives an external interrupt"],
-correct: "B",
-explanation: "It matches OCR1A"
-},
+{ type: "mcq", q: "The register that stores the current Timer1 count is:", 
+options: ["A) OCR1A", "B) TCNT1", "C) TIMSK1", "D) TCCR1A"], 
+correct: "B", explanation: "TCNT1" },
+{ type: "mcq", q: "Which register is used to enable Timer1 interrupts?", 
+options: ["A) TCCR1A", "B) TCNT1", "C) TIMSK1", "D) OCR1A"], 
+correct: "C", explanation: "TIMSK1" },
 
-{ type: "mcq",
-q: "The register that stores the current Timer1 count is:",
-options: ["A) OCR1A", "B) TCNT1", "C) TIMSK1", "D) TCCR1A"],
-correct: "B",
-explanation: "TCNT1"
-},
-{ type: "mcq",
-q: "The bit used to enable Timer1 Compare Match A interrupt is:",
-options: ["A) WGM12", "B) OCIE1A", "C) CS10", "D) OCF1A"],
-correct: "B",
-explanation: "OCIE1A"
-},
+{ type: "mcq", q: "Which interrupt vector is used for Timer1 Compare Match A?", 
+options: ["A) TIMER1_OVF_vect", "B) TIMER1_COMPA_vect", "C) TIMER1_COMPB_vect", "D) TIMER0_OVF_vect"], 
+correct: "B", explanation: "TIMER1_COMPA_vect" },
 
-{ type: "mcq",
-q: "The formula to compute OCR1A for a desired period T (CTC) is:",
-options: ["A) OCR1A = (T x F_CPU / N) - 1", "B) OCR1A = (N x F_CPU / T) - 1", "C) OCR1A = T + N", "D) OCR1A = F_CPU - N"],
-correct: "A",
-explanation: "OCR1A = (T x F_CPU / N) - 1"
-},
+{ type: "mcq", q: "Interrupt Service Routine (ISR) should be:", 
+options: ["A) Very long", "B) Blocking", "C) Short and fast", "D) Infinite loop"], 
+correct: "C", explanation: "Short and fast" },
 
-{ type: "mcq",
-q: "volatile is needed for variables updated in ISR because:",
-options: ["A) It makes the variable constant", "B) It prevents compiler from assuming the value never changes", "C) It increases clock speed", "D) It changes prescaler"],
-correct: "B",
-explanation: "It prevents compiler from assuming the value never changes"
-},
+{ type: "mcq", q: "The global interrupt enable instruction in AVR is:", 
+options: ["A) sei()", "B) cli()", "C) delay()", "D) ISR()"], 
+correct: "A", explanation: "sei()" },
 
-{ type: "mcq",
-q: "If TIMSK1 enables the interrupt but sei() is NOT called, then:",
-options: ["A) ISR runs normally", "B) ISR never runs", "C) Timer stops counting", "D) OCR1A resets to zero"],
-correct: "B",
-explanation: "ISR never runs"
-},
+{ type: "mcq", q: "ADC stands for:", 
+options: ["A) Analog Data Converter", "B) Analog to Digital Converter", "C) Automatic Data Controller", "D) Analog Device Controller"], 
+correct: "B", explanation: "Analog to Digital Converter" },
 
-{ type: "mcq",
-q: "With 16 MHz clock and prescaler 64, the timer tick frequency becomes:",
-options: ["A) 16 MHz", "B) 1 MHz", "C) 250 kHz", "D) 64 kHz"],
-correct: "C",
-explanation: "250 kHz"
-},
+{ type: "mcq", q: "Which register selects the ADC reference voltage?", 
+options: ["A) ADMUX", "B) ADCSRA", "C) DDRx", "D) PORTx"], 
+correct: "A", explanation: "ADMUX" },
 
-{ type: "mcq",
-q: "In Normal mode, an event occurs when:",
-options: ["A) TCNT1 == OCR1A", "B) Counter reaches MAX and returns to 0", "C) Prescaler becomes 0", "D) sei() is called"],
-correct: "B",
-explanation: "Counter reaches MAX and returns to 0"
-},
+{ type: "mcq", q: "The ADC conversion result is stored in:", 
+options: ["A) OCR1A", "B) ADCL/ADCH", "C) PORTA", "D) DDRB"], 
+correct: "B", explanation: "ADCL/ADCH" },
 
-{ type: "mcq",
-q: "The register that holds the compare value for Timer1 channel A is:",
-options: ["A) TCNT1", "B) OCR1A", "C) TIFR1", "D) DDRB"],
-correct: "B",
-explanation: "OCR1A"
-},
+{ type: "mcq", q: "PWM stands for:", 
+options: ["A) Pulse Width Modulation", "B) Pulse Wave Modulation", "C) Power Width Mode", "D) Pulse Work Module"], 
+correct: "A", explanation: "Pulse Width Modulation" },
 
-{ type: "mcq",
-q: "Polling means:",
-options: ["A) CPU waits by checking a flag repeatedly", "B) CPU sleeps permanently", "C) CPU runs ISR automatically", "D) Timer stops counting"],
-correct: "A",
-explanation: "CPU waits by checking a flag repeatedly"
-},
+{ type: "mcq", q: "PWM is mainly used to:", 
+options: ["A) Store data", "B) Control analog output using digital signal", "C) Increase memory", "D) Reset timers"], 
+correct: "B", explanation: "Control analog output using digital signal" },
 
-{ type: "mcq",
-q: "An interrupt-based timer is better because:",
-options: ["A) It wastes CPU time", "B) It blocks the program", "C) It allows accurate timing while CPU does other tasks", "D) It disables peripherals"],
-correct: "C",
-explanation: "It allows accurate timing while CPU does other tasks"
-},
+{ type: "mcq", q: "Which register controls PWM duty cycle?", 
+options: ["A) TCNT1", "B) OCRx", "C) DDRx", "D) PINx"], 
+correct: "B", explanation: "OCRx" },
 
-{ type: "mcq",
-q: "Compared to polling, the biggest advantage of external interrupts is:",
-options: ["A) Higher RAM", "B) Immediate response without constant checking", "C) Higher clock speed", "D) More flash memory"],
-correct: "B",
-explanation: "Immediate response without constant checking"
-},
+{ type: "mcq", q: "UART stands for:", 
+options: ["A) Universal Asynchronous Receiver Transmitter", "B) Universal Analog Receiver Tool", "C) Unified Address Receiver Transmitter", "D) Universal Automatic Register Tool"], 
+correct: "A", explanation: "Universal Asynchronous Receiver Transmitter" },
 
-{ type: "mcq",
-q: "Pin polling mainly wastes CPU time because it:",
-options: ["A) Uses ADC", "B) Blocks the CPU in repeated reads/delays", "C) Disables timers", "D) Forces UART off"],
-correct: "B",
-explanation: "Blocks the CPU in repeated reads/delays"
-},
+{ type: "mcq", q: "Which register holds received UART data?", 
+options: ["A) UDR", "B) DDR", "C) OCR", "D) PORT"], 
+correct: "A", explanation: "UDR" },
 
-{ type: "mcq",
-q: "The register used to enable/disable specific external interrupts INTx is:",
-options: ["A) EIFR", "B) EIMSK", "C) EICRA", "D) SREG"],
-correct: "B",
-explanation: "EIMSK"
-},
+{ type: "mcq", q: "SPI communication uses how many lines (basic)?", 
+options: ["A) 2", "B) 3", "C) 4", "D) 6"], 
+correct: "C", explanation: "4" },
 
-{ type: "mcq",
-q: "For ATmega2560, INT0..INT3 sense control bits are in:",
-options: ["A) EICRA", "B) EICRB", "C) EIFR", "D) EIMSK"],
-correct: "A",
-explanation: "EICRA"
-},
+{ type: "mcq", q: "I2C communication typically uses:", 
+options: ["A) 1 line", "B) 2 lines", "C) 3 lines", "D) 4 lines"], 
+correct: "B", explanation: "2" },
 
-{ type: "mcq",
-q: "For ATmega2560, INT4..INT7 sense control bits are in:",
-options: ["A) EICRA", "B) EICRB", "C) EIFR", "D) TIMSK1"],
-correct: "B",
-explanation: "EICRB"
-},
+{ type: "mcq", q: "Which communication protocol is synchronous?", 
+options: ["A) UART", "B) SPI", "C) Analog", "D) ADC"], 
+correct: "B", explanation: "SPI" },
+{ type: "mcq", q: "Which protocol is commonly used to connect multiple devices using only two wires?", 
+options: ["A) UART", "B) SPI", "C) I2C", "D) USB"], 
+correct: "C", explanation: "I2C" },
 
-{ type: "mcq",
-q: "The meaning of ISCx1:ISCx0 = 10 is:",
-options: ["A) Low level", "B) Any change", "C) Falling edge", "D) Rising edge"],
-correct: "C",
-explanation: "Falling edge"
-},{ type: "mcq",
-q: "The meaning of ISCx1:ISCx0 = 11 is:",
-options: ["A) Low level", "B) Any change", "C) Falling edge", "D) Rising edge"],
-correct: "D",
-explanation: "Rising edge"
-},
+{ type: "mcq", q: "In UART communication, baud rate refers to:", 
+options: ["A) Data size", "B) Transmission speed", "C) Memory size", "D) Voltage level"], 
+correct: "B", explanation: "Transmission speed" },
 
-{ type: "mcq",
-q: "The meaning of ISCx1:ISCx0 = 00 is:",
-options: ["A) Low level", "B) Any change", "C) Falling edge", "D) Rising edge"],
-correct: "A",
-explanation: "Low level"
-},
+{ type: "mcq", q: "Which flag indicates that UART transmission is complete?", 
+options: ["A) RXC", "B) TXC", "C) ADC", "D) SPI"], 
+correct: "B", explanation: "TXC" },
 
-{ type: "mcq",
-q: "When using a pull-up resistor and a button connected to GND, the best trigger for \"press\" is:",
-options: ["A) Rising edge", "B) Falling edge", "C) Low level only", "D) Any change always"],
-correct: "B",
-explanation: "Falling edge"
-},
+{ type: "mcq", q: "Which module is used to measure analog voltage?", 
+options: ["A) Timer", "B) UART", "C) ADC", "D) SPI"], 
+correct: "C", explanation: "ADC" },
 
-{ type: "mcq",
-q: "sei() does:",
-options: ["A) Enables only INT0", "B) Enables global interrupts", "C) Clears EIFR", "D) Resets Timer0"],
-correct: "B",
-explanation: "Enables global interrupts"
-},
+{ type: "mcq", q: "Which component converts digital signal to analog-like output?", 
+options: ["A) ADC", "B) PWM", "C) UART", "D) Timer"], 
+correct: "B", explanation: "PWM" },
 
-{ type: "mcq",
-q: "cli() does:",
-options: ["A) Disables global interrupts", "B) Enables Timer interrupts", "C) Sets OCR0A", "D) Enables UART"],
-correct: "A",
-explanation: "Disables global interrupts"
-},
+{ type: "mcq", q: "Which register starts ADC conversion?", 
+options: ["A) ADCSRA", "B) DDRx", "C) OCRx", "D) PORTx"], 
+correct: "A", explanation: "ADCSRA" },
 
-{ type: "mcq",
-q: "The best practice for ISRs is to:",
-options: ["A) Print a lot to Serial inside ISR", "B) Do long computations in ISR", "C) Keep ISR short and set a flag", "D) Call delay() for debounce"],
-correct: "C",
-explanation: "Keep ISR short and set a flag"
-},
+{ type: "mcq", q: "Which bit enables ADC module?", 
+options: ["A) ADEN", "B) ADSC", "C) ADIF", "D) ADIE"], 
+correct: "A", explanation: "ADEN" },
 
-{ type: "mcq",
-q: "In EIFR, to clear an external interrupt flag (INTFx), you typically:",
-options: ["A) Write 0 to it", "B) Read PINx", "C) Write 1 to it", "D) Call sei() twice"],
-correct: "C",
-explanation: "Write 1 to it"
-},
+{ type: "mcq", q: "The purpose of interrupts is to:", 
+options: ["A) Delay execution", "B) Stop CPU permanently", "C) Respond immediately to events", "D) Increase memory"], 
+correct: "C", explanation: "Respond immediately to events" },
 
-{ type: "mcq",
-q: "If INTx is configured as low-level, the interrupt request can:",
-options: ["A) Trigger repeatedly as long as the pin stays LOW", "B) Trigger only once ever", "C) Never trigger", "D) Only trigger on rising edge"],
-correct: "A",
-explanation: "Trigger repeatedly as long as the pin stays LOW"
-},
+{ type: "mcq", q: "Which function disables global interrupts?", 
+options: ["A) sei()", "B) cli()", "C) ISR()", "D) delay()"], 
+correct: "B", explanation: "cli()" },
 
-{ type: "mcq",
-q: "For a 1ms tick using Timer0 CTC, the interrupt that fires is typically:",
-options: ["A) INT4_vect", "B) TIMER0_COMPA_vect", "C) USART_RX_vect", "D) TIMER1_OVF_vect"],
-correct: "B",
-explanation: "TIMER0_COMPA_vect"
-},
+{ type: "mcq", q: "Timer overflow occurs when:", 
+options: ["A) Timer reaches zero", "B) Timer matches OCR", "C) Timer exceeds maximum value", "D) Interrupt occurs"], 
+correct: "C", explanation: "Timer exceeds maximum value" },
 
-{ type: "mcq",
-q: "PWM stands for:",
-options: ["A) Pulse Width Modem", "B) Pulse Width Modulation", "C) Parallel Wave Memory", "D) Power Width Modulation"],
-correct: "B",
-explanation: "Pulse Width Modulation"
-},
+{ type: "mcq", q: "Which timer mode resets the counter automatically at compare match?", 
+options: ["A) Normal mode", "B) PWM mode", "C) CTC mode", "D) Sleep mode"], 
+correct: "C", explanation: "CTC mode" },
 
-{ type: "mcq",
-q: "Duty cycle is:",
-options: ["A) Number of timers in the MCU", "B) Percentage of time the signal is HIGH in one period", "C) PWM frequency value", "D) The ADC resolution"],
-correct: "B",
-explanation: "Percentage of time the signal is HIGH in one period"
-},
+{ type: "mcq", q: "Which register configures timer mode?", 
+options: ["A) TCCR1A / TCCR1B", "B) DDRx", "C) PORTx", "D) PINx"], 
+correct: "A", explanation: "TCCR1A / TCCR1B" },
 
-{ type: "mcq",
-q: "A duty cycle of 0% means the output is:",
-options: ["A) Always HIGH", "B) Always LOW", "C) 50% HIGH and 50% LOW", "D) Random"],
-correct: "B",
-explanation: "Always LOW"
-},
+{ type: "mcq", q: "Which register stores compare value in Timer1?", 
+options: ["A) TCNT1", "B) OCR1A", "C) TIMSK1", "D) DDRB"], 
+correct: "B", explanation: "OCR1A" },
 
-{ type: "mcq",
-q: "A duty cycle of 100% means the output is:",
-options: ["A) Always HIGH", "B) Always LOW", "C) Pulsing", "D) Disabled"],
-correct: "A",
-explanation: "Always HIGH"
-},
+{ type: "mcq", q: "Which device typically uses PWM for speed control?", 
+options: ["A) LED", "B) Motor", "C) Switch", "D) Sensor"], 
+correct: "B", explanation: "Motor" },
 
-{ type: "mcq",
-q: "In Fast PWM, the timer counter counts:",
-options: ["A) TOP to 0 only", "B) 0 to TOP repeatedly", "C) 0 to TOP to 0 (up and down)", "D) Randomly"],
-correct: "B",
-explanation: "0 to TOP repeatedly"
-},
+{ type: "mcq", q: "Which type of memory loses data when power is turned off?", 
+options: ["A) ROM", "B) Flash", "C) EEPROM", "D) RAM"], 
+correct: "D", explanation: "RAM" },
 
-{ type: "mcq",
-q: "In Phase Correct PWM, the timer counter counts:",
-options: ["A) 0 to TOP only", "B) TOP to 0 only", "C) 0 to TOP to 0 (up then down)", "D) 0 to OCR only"],
-correct: "C",
-explanation: "0 to TOP to 0 (up then down)"
-},
+{ type: "mcq", q: "EEPROM memory is mainly used to:", 
+options: ["A) Store temporary data", "B) Store permanent small data", "C) Increase CPU speed", "D) Display graphics"], 
+correct: "B", explanation: "Store permanent small data" },
 
-{ type: "mcq",
-q: "Compared to Fast PWM (same TOP and prescaler), Phase Correct PWM frequency is usually:",
-options: ["A) Higher", "B) About the same", "C) About half", "D) Infinite"],
-correct: "C",
-explanation: "About half"
-},
+{ type: "mcq", q: "Which port direction register controls data direction?", 
+options: ["A) PORTx", "B) PINx", "C) DDRx", "D) OCRx"], 
+correct: "C", explanation: "DDRx" },
 
-{ type: "mcq",
-q: "OCRnx register is mainly used to control:",
-options: ["A) Timer prescaler", "B) PWM duty cycle", "C) Global interrupts", "D) UART baud rate"],
-correct: "B",
-explanation: "PWM duty cycle"
-},
+{ type: "mcq", q: "Which register is used to write output values to pins?", 
+options: ["A) PORTx", "B) PINx", "C) DDRx", "D) ADMUX"], 
+correct: "A", explanation: "PORTx" },
 
-{ type: "mcq",
-q: "The main advantage of Phase Correct PWM is:",
-options: ["A) More interrupts", "B) More symmetric (center-aligned) waveform", "C) Requires no timer registers", "D) Works only with ADC"],
-correct: "B",
-explanation: "More symmetric waveform"
-},
+{ type: "mcq", q: "Which register reads input pin values?", 
+options: ["A) PORTx", "B) PINx", "C) DDRx", "D) TCCR"], 
+correct: "B", explanation: "PINx" },
 
-{ type: "mcq",
-q: "If you increase the prescaler value, PWM frequency will:",
-options: ["A) Increase", "B) Decrease", "C) Stay the same", "D) Become random"],
-correct: "B",
-explanation: "Decrease"
-},
+{ type: "mcq", q: "Microcontrollers are mainly used in:", 
+options: ["A) Desktop computers", "B) Embedded systems", "C) Gaming consoles only", "D) Supercomputers"], 
+correct: "B", explanation: "Embedded systems" },
 
-{ type: "mcq",
-q: "To change duty cycle in real time, you should update:",
-options: ["A) TCCRnB only", "B) OCRnx", "C) DDRx", "D) ICRn only"],
-correct: "B",
-explanation: "OCRnx"
-}
+
+
+
+
+  
+{ type: "tf",
+q: "Timer starts counting when the timer enable bit (CS) can change at anytime.",
+correct: "True" },
+
+{ type: "tf",
+q: "Timer resets automatically when compare match occurs in CTC mode.",
+correct: "True" },
+
+{ type: "tf",
+q: "Compare Match value should be written before starting the timer.",
+correct: "True" },
+
+{ type: "tf",
+q: "Interrupt flag must be cleared manually after compare match.",
+correct: "False" },
+
+{ type: "tf",
+q: "Global interrupt must be enabled to use timer interrupt.",
+correct: "True" },
+
+{ type: "tf",
+q: "Timer starts counting when the timer enable bit (CS) can change at anytime.",
+correct: true,
+explanation: "True" },
+
+{ type: "tf",
+q: "Timer resets automatically when compare match occurs in CTC mode.",
+correct: true,
+explanation: "True" },
+
+{ type: "tf",
+q: "Compare Match value should be written before starting the timer.",
+correct: true,
+explanation: "True" },
+
+{ type: "tf",
+q: "Interrupt flag must be cleared manually after compare match.",
+correct: false,
+explanation: "False" },
+
+{ type: "tf",
+q: "Global interrupt must be enabled to use timer interrupt.",
+correct: true,
+explanation: "True" }
+
+
                 ]
-};
+            }
+        }
         
         // ====================== PRAYER PAGE ======================
         function prayAndProceed() {
@@ -1194,6 +1000,6 @@ explanation: "OCRnx"
         window.onload = function() {
             initTailwind()
             createParticles()
-            console.log('%c✅ - بنك أسئلة جمال رأفت (تمت إضافة Software Engineering)', 'background:#0ea5e9;color:white;padding:4px 8px;border-radius:4px')
+            console.log('%c✅ - بنك أسئلة جمال رأفت', 'background:#0ea5e9;color:white;padding:4px 8px;border-radius:4px')
             console.log('جميع الأسئلة مستخرجة من الـ PDFs المرفقة (MCQ + True/False فقط)')
         }
