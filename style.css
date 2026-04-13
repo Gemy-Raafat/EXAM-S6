@@ -46,3 +46,216 @@
         .result-bar {
             animation: growBar 1.5s ease forwards;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Responsive Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Container responsiveness */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .question-card {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Make options stack nicely */
+    .options-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .option-item {
+        width: 100%;
+        padding: 0.75rem;
+    }
+    
+    /* Smaller headings */
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    /* Logo area */
+    .logo-glow {
+        font-size: 1.8rem !important;
+    }
+    
+    /* Buttons full width on mobile */
+    button, .btn {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Flex columns on mobile */
+    .flex-row-mobile {
+        flex-direction: column;
+    }
+    
+    /* Results section */
+    .result-bar {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet (641px to 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Small desktop (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* Large desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* Fix images and media */
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Touch-friendly for mobile */
+@media (max-width: 768px) {
+    button, 
+    .option-item,
+    select,
+    input {
+        min-height: 44px; /* Better touch target */
+        cursor: pointer;
+    }
+    
+    /* Prevent horizontal scroll */
+    .overflow-x-auto {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Better spacing for prayer section */
+    .prayer-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        font-size: 13px;
+    }
+    
+    .question-card {
+        padding: 0.75rem !important;
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Very small devices (below 360px) */
+@media (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+    
+    .logo-glow {
+        font-size: 1.4rem !important;
+    }
+    
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+}
+
+.questions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 1rem;
+}
